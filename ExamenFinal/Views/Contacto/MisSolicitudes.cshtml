@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <a href="/Cuentas/Index">volver</a>
+    <br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Aceptar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id_Usuario_Destino</td>
+                    <td><a href="/Contacto/AceptarSolicitud?idsolicitud=@item.Id_Solicitud">Aceptar Solicitud</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

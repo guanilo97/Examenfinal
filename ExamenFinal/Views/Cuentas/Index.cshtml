@@ -1,0 +1,37 @@
+﻿<div class="container">
+    <a href="/Transferencia/Index" class="btn btn-primary">Transferencias</a>
+    <a href="/Cuentas/Crear" class="btn btn-primary">Crear cuenta</a>
+    <a href="/Contacto/Index" class="btn btn-warning"> Contactos</a>
+    <br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Saldo</th>
+                <th>Opcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    @if (item.Categoria == 1)
+                    {
+                        <td>Propio</td>
+                    }
+                    else
+                    {
+                        <td>Credito</td>
+                    }
+                    <td>@item.Saldo_Inicial</td>
+                    <td>
+                        <a href="/Ingreso/Index?idcuenta=@item.Id_Cuenta" class="btn btn-success">Ingreso</a>
+                        <a href="/Gasto/Index?idcuenta=@item.Id_Cuenta" class="btn btn-warning">Gasto</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

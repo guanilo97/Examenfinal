@@ -1,0 +1,28 @@
+﻿<div class="container">
+    <a href="/Cuentas/Index">volver</a>
+    <a href="/Transferencia/Crear" class="btn btn-primary">Crear transferencia</a>
+    <br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Fecha y hora</th>
+                <th>Monto</th>
+                <th>Cuenta Origen</th>
+                <th>Cuenta destino</th>
+                <th>Decripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Fecha_Hora</td>
+                <td>@item.Monto</td>
+                <td>@item.Id_Cuenta_Origen</td>
+                <td>@item.Id_Cuenta_Destino</td>
+                <td>@item.Descripcion</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

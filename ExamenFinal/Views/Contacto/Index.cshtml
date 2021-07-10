@@ -1,0 +1,23 @@
+﻿<div class="container">
+    <a href="/Cuentas/Index">volver</a>
+    <a href="/Contacto/Usuarios" class="btn btn-primary">Agregar amigos</a>
+    <a href="/Contacto/MisSolicitudes" class="btn btn-warning">Solicitudes de amistad</a>
+    <br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Contactos</th>
+                <th>Transferir</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id_Amigo</td>
+                    <td><a href="/Transferencia/TransferirAmigo?idamigo=@item.Id_Amigo">Transferir dinero</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

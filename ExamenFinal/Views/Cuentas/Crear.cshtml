@@ -1,0 +1,22 @@
+﻿
+<form method="post" action="/Cuentas/Crear">
+    <div class="form-group">
+        <label for="Username">Nombre</label>
+        <input type="text" name="Nombre" class="form-control form-control-line" id="Username">
+    </div>
+    <div class="form-group">
+        <label for="example-password">Categoria</label>
+        <select name="Categoria" class="form-control">
+            <option>--Seleccione categoria--</option>
+            <option value="1">Propio</option>
+            <option value="2">Credito</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Username">Saldo inicial</label>
+        <input type="number" name="Saldo_Inicial" class="form-control form-control-line" id="Username">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-block btn-lg btn-primary text-uppercase fs-12 fw-600">Registrar</button>
+    </div>
+</form>
